@@ -1,0 +1,38 @@
+# PiTrust-Market
+
+*PiTrust-Market* est une plateforme d’e-commerce sécurisée construite avec *Django* et intégrée au *Pi Network*.  
+Elle permet aux utilisateurs d’acheter et vendre des biens et services en utilisant *Pi* ou d’autres cryptomonnaies, avec un système *escrow (séquestre)* pour sécuriser les paiements.
+
+---
+
+## 🎯 Objectif du projet
+- Permettre l'utilisation de *Pi dans le monde réel* via une marketplace sécurisée.  
+- Fournir un *système de paiement sécurisé* avec escrow pour protéger acheteurs et vendeurs.  
+- Supporter des transactions *biens et services* et éventuellement *multi-monnaie*.  
+- Créer un *MVP fonctionnel pour le Hackathon Pi 2025*.
+
+---
+
+## 🏗 Architecture du projet
+Le projet est structuré en *3 apps principales* :
+
+### 1️⃣ users – Gestion des utilisateurs
+- *Modèle* : User (hérité de Django User ou personnalisé)  
+  - Pi ID  
+  - Wallet (adresse Pi)  
+  - Email, nom, mot de passe  
+- *Fonctions* :  
+  - Signup / Login / Logout  
+  - Authentification via Pi Network  
+  - Tableau de bord utilisateur  
+
+### 2️⃣ marketplace – Gestion des produits
+- *Modèle* : Product  
+  - nom, description, image  
+  - prix (en Pi ou autre crypto)  
+  - vendeur (User)  
+  - statut (disponible / vendu)  
+- *Fonctions* :  
+  - CRUD produits  
+  - Liste publique des produits  
+  - Recherche et filtrage
